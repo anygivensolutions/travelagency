@@ -35,7 +35,13 @@ app.get('/', (req, res) => {
     res.render('landing');
 });
 
-
+app.get('/addressbook', (req, res) => {
+    res.render('addressbook/index');
+});
+ 
+app.get('/paymentbook', (req, res) => {
+    res.render('paymentbook/index');
+});
 
 app.listen(3000, () => {
     console.log('=====Serving Wanda\'s Tours =====');
