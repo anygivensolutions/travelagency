@@ -7,12 +7,13 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const passportLocalMongoose = require('passport-local-mongoose');
 const serveStatic = require('serve-static');
+const expressSanitize = require('express-sanitizer');
 const User = require('./models/user');
 const app = express();
 require('dotenv').config();
 //db config
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/wandastours?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
+mongoose.connect(`mongodb://${process.env.USERNAME}:${process.env.PSWD}@localhost/${process.env.DB}?authSource=${process.env.SOURCE}`, {useNewUrlParser: true});
 // app config
 app.set('view engine', 'hbs');
 app.use(passport.initialize());
@@ -23,12 +24,15 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use(expressSanitize());
+//hbs registration
+hbs.registerPartials(__dirname + '/views/partials');
 //serve public routes 
 app.use(serveStatic('public'));
 
 
 app.get('/', (req, res) => {
-    res.send('this is the dahsboard');
+    res.render('landing');
 });
 
 
