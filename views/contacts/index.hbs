@@ -1,0 +1,5 @@
+<h1>This is the contacts page</h1>
+{{#each contacts}}
+<p>{{this.firstName}}</p>
+<a href='/{{this._id}}'>show contact</a>
+{{/each}}

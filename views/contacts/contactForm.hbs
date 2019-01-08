@@ -1,0 +1,17 @@
+{{>header}}
+
+<h1>Add New Contact</h1>
+<form action='/addressbook/new' method='post'>
+    <input type='text' name='firstName' placeholder='First Name'>
+    <input type='text' name='lastName' placeholder='Last Name'>
+    <input type='text' name='email' placeholder='Email'>
+    <input type='text' name='homePhone' placeholder='Home Phone'>
+    <input type='text' name='cell' placeholder='Cellphone'>
+    <input type='text' name='address' placeholder='Street Address'>
+    <input type='text' name='city' placeholder='City'>
+    <input type='text' name='state' placeholder='Sate'>
+    <input type='text' name='zipcode' placeholder='zipcode'>
+    <button>Create New Contact</button>
+</form>
+
+{{>footer}}
