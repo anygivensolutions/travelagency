@@ -35,20 +35,40 @@ app.use(serveStatic('public'));
 app.get('/', (req, res) => {
     res.render('landing');
 });
-
-app.get('/addressbook', (req, res) => {
+// show contacts list 
+app.get('/contacts', (req, res) => {
     Contact.find().exec(function(err, allContacts) {
         if(err){
             console.log(err)
         } else {
-            res.render('addressbook/index',{
+            res.render('contacts/index',{
                 pageTitle: 'Address Book',
                 contacts: allContacts
             });
         }
     });
 });
- 
+//show one contact 
+app.get('/:id', (req, res) => {
+    Contact.findById(req.params.id).populate('contact').exec(function(err, foundContact){
+    if(err) {
+        console.log(err);
+    } else {
+        console.log(foundContact);
+        res.render('contacts/show', {
+            contact: foundContact
+        });
+        }
+    });
+});
+// show form to create new contact
+app.get('/addressbook/new', (req, res) => {
+    res.render('addressbook/contactForm');
+});
+// add new contact 
+app.post('/addressbook/contact/new', (req, res) => {
+    
+});
 app.get('/paymentbook', (req, res) => {
     res.render('paymentbook/index');
 });
