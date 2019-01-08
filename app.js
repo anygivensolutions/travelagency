@@ -9,6 +9,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const serveStatic = require('serve-static');
 const expressSanitize = require('express-sanitizer');
 const User = require('./models/user');
+const Contact = require('./models/contact');
 const app = express();
 require('dotenv').config();
 //db config
@@ -36,7 +37,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/addressbook', (req, res) => {
-    res.render('addressbook/index');
+    Contact.find().exec(function(err, allContacts) {
+        if(err){
+            console.log(err)
+        } else {
+            res.render('addressbook/index',{
+                pageTitle: 'Address Book',
+                contacts: allContacts
+            });
+        }
+    });
 });
  
 app.get('/paymentbook', (req, res) => {
