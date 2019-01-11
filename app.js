@@ -48,6 +48,23 @@ app.get('/contacts', (req, res) => {
         }
     });
 });
+
+//create new contact 
+app.get('/contacts/new', (req, res) => {
+    res.render('contacts/contactForm');
+});
+//add new contact 
+app.post('/contacts/new', (req, res) => {
+    console.log(req.body.contact);
+    Contact.create(req.body.contact, function(err, newContact){
+        if(err){
+        console.log(err);
+        res.render('contacts/index');
+        } else {
+        res.redirect('/contacts');
+        }
+    });
+});
 //show one contact 
 app.get('/:id', (req, res) => {
     Contact.findById(req.params.id).populate('contact').exec(function(err, foundContact){
