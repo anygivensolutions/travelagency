@@ -1,5 +1,20 @@
-<h1>This is the contacts page</h1>
+{{>header}}
+<div id="contactList">
 {{#each contacts}}
-<p>{{this.firstName}}</p>
-<a href='/{{this._id}}'>show contact</a>
-{{/each}}
+    <div class='contactList ui celled divided list'>
+        <div class='item'>
+            <div class='content'>
+                <div class='header'>
+                {{this.firstName}}, {{this.lastName}}
+                </div>
+                <a href='{{this._id}}'>View Contact</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    {{/each}}
+<a href='/contacts/new'>Create new contact</a>
+</div>
+{{>footer}}
