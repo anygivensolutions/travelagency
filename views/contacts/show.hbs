@@ -1,14 +1,24 @@
 {{>header}}
-<div class='fourteen wide column'>
-<h1>Show one contact</h1>
-{{contact.firstName}}
-{{contact.lastName}}
-{{contact.email}}
-{{contact.homePhone}}
-{{contact.cell}}
-{{contact.address}}
-{{contact.city}}
-{{contact.state}}
-{{contact.zipcode}}
+<div id='contactCard' class='fourteen wide column'>
+    <div class="ui card">
+    <div class="content">
+        <div class="header">{{contact.firstName}}</div>
+    </div>
+    <div class="content">
+        <h4 class="ui sub header">Email</h4>
+            <div class='content'>{{contact.email}}</div>
+            <h4 class='ui sub header'>Cellphone:</h4>
+            <div class='content'>{{contact.cell}}</div>
+            <h4 class='ui sub header'>Home Phone</h4>
+            <div class='content'>{{contact.homePhone}}</div>
+            <h4 class='ui sub header'>Address</h4>
+            <div class='content'>{{contact.address}}</div>
+            <div class='summary'>{{contact.city}}, {{contact.state}} {{contact.zipcode}}</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 </div>
 {{>footer}}
