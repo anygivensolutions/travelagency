@@ -1,11 +1,62 @@
-body {
-    margin: 0 auto;
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0 auto;
+    background-color: #111777;
+    max-height: 100vh;
+}
+.ui.container {
+
+}
+.addressBookContainer {
+    margin-top: 50%;
+}
+.addressBook {
+   max-width: 100px;
+   display: inline-block;
+   margin: 1em;
+}
+.payments {
+    max-width: 3em;
+    display: inline-block;
+    margin: 1em;
+}
+.address.book.icon {
+    color: #8A82B8;
+    
+}
+.dollar.sign.icon {
+    color: #8A82B8;
+    text-align: centered;
+}
 .payments {
     text-align: center;
     color: blue;
 } 
 .address {
     color: blue;
+}
+#contactList {
+    margin-top: 50%;
+}
+.header {
+    font-size: 2em;
+}
+#contactList {
+    margin-top: 30px;
+}
+.divider {
+    color: red;
+}
+#contactCard {
+
+    margin-top: 50%;
+}
+
+@media screen and (min-width: 300px) {
+    
 }
