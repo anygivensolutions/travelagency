@@ -9,7 +9,8 @@ var contactSchema = new mongoose.Schema({
     address: String,
     city: String,
     state: String,
-    zipcode: String
+    zipcode: String,
+    Notes: []
 });
 
 module.exports = mongoose.model('Contact', contactSchema);
