@@ -1,24 +1,22 @@
 {{>header}}
-<div id='contactCard' class='fourteen wide column'>
-    <div class="ui card">
-    <div class="content">
-        <div class="header">{{contact.firstName}}</div>
-    </div>
-    <div class="content">
-        <h4 class="ui sub header">Email</h4>
-            <div class='content'>{{contact.email}}</div>
-            <h4 class='ui sub header'>Cellphone:</h4>
-            <div class='content'>{{contact.cell}}</div>
-            <h4 class='ui sub header'>Home Phone</h4>
-            <div class='content'>{{contact.homePhone}}</div>
-            <h4 class='ui sub header'>Address</h4>
-            <div class='content'>{{contact.address}}</div>
-            <div class='summary'>{{contact.city}}, {{contact.state}} {{contact.zipcode}}</div>
-</div>
-</div>
-</div>
 
-</div>
-</div>
+<div class='contactCard'>
+<p class='contactCard_name'>{{contact.firstName}} {{contact.lastName}}</p>
+<hr>
+<p class='contact.email'>Email: {{contact.email}}</p>
+<a href=mailto:{{contact.email}} ><button>Send Email</button></a>
+<hr>
+<p class='contactCard_homePhone'>Home Phone: {{contact.homePhone}}</p>
+<a href='tel:{{contact.homePhone}}'><button class='ui inverted button grey'>Call</button></a>
+<hr>
+<p class='contactCard_cell'>Cell Phone: {{contact.cell}}</p>
+<a href='tel:{{contact.cell}}'><button>Call</button></a>
+<hr>
+<p class='contactCard_addressHeading'>Address:<p>
+<p class='contactCard_address'>{{contact.address}} {{contact.city}}, {{contact.state}} {{contact.zipcode}}</p>
+<button>Print Label</button>
+<hr>
+<button>Edit Contact</button>
+<button>Delete Contact</button>
 </div>
 {{>footer}}
