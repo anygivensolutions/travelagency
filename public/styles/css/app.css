@@ -6,14 +6,18 @@
 
 body {
     margin: 0 auto;
-    background-color: #111777;
-    max-height: 100vh;
+    background-color: #010319;
+    height: 100%;
+    width: 100%
 }
 .ui.container {
 
 }
+.individualCard {
+    background-color: #010319;
+}
 .addressBookContainer {
-    margin-top: 50%;
+    margin-top: 30px;
 }
 .addressBook {
    max-width: 100px;
@@ -25,10 +29,7 @@ body {
     display: inline-block;
     margin: 1em;
 }
-.address.book.icon {
-    color: #8A82B8;
     
-}
 .dollar.sign.icon {
     color: #8A82B8;
     text-align: centered;
@@ -40,23 +41,38 @@ body {
 .address {
     color: blue;
 }
-#contactList {
-    margin-top: 50%;
-}
-.header {
-    font-size: 2em;
-}
-#contactList {
+.contactList {
     margin-top: 30px;
+    color: white;
 }
-.divider {
-    color: red;
-}
-#contactCard {
-
-    margin-top: 50%;
+hr {
+    color: white;
+    width: 100%;
 }
 
+.contactCard {
+    color: white;
+    margin-top: 20px;
+}
+.contactCard_name {
+    font-size: 3em;
+}
+.contactCard_email {
+    font-size: 1.5em;
+}
+.contactCard_homePhone {
+    font-size: 1.5em;
+}
+.contactCard_cell {
+    font-size: 1.5em;
+}
+.contactCard_addressHeading {
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+.contactCard_address {
+    font-size: 1.5em;
+}
 @media screen and (min-width: 300px) {
     
 }
