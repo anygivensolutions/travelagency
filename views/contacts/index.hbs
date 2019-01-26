@@ -1,20 +1,9 @@
-{{>header}}
-<div id="contactList">
+{{> header}}
 {{#each contacts}}
-    <div class='contactList ui celled divided list'>
-        <div class='item'>
-            <div class='content'>
-                <div class='header'>
-                {{this.firstName}}, {{this.lastName}}
-                </div>
-                <a href='{{this._id}}'>View Contact</a>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    </div>
-    {{/each}}
-<a href='/contacts/new'>Create new contact</a>
+<div class='contactList fourteen wide column'>
+<p>{{this.firstName}}, {{this.lastName}}</p>
+<a href='{{this._id}}'>View Contact</a>
 </div>
+<hr>
+{{/each}}
 {{>footer}}
