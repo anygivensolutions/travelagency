@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 });
 // show contacts list 
 app.get('/contacts', (req, res) => {
-    Contact.find().exec(function(err, allContacts) {
+    Contact.find().sort({firstName:1}).exec(function(err, allContacts) {
         if(err){
             console.log(err)
         } else {
