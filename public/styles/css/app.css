@@ -11,7 +11,7 @@ body {
     width: 100%
 }
 .ui.container {
-
+  margin-top: 10px;
 }
 .individualCard {
     background-color: #010319;
@@ -41,9 +41,24 @@ body {
 .address {
     color: blue;
 }
+.circular.ui.i {
+  color: #8A82B8;
+}
+.newContactHeader {
+  margin-top: 30px;
+}
+.newContactButton {
+  display: block;
+}
+.circular.ui.user {
+  align:left;
+}
+.contactList-newContact>a{
+  color: #010318;
+}
 .contactList {
-    margin-top: 30px;
     color: white;
+    align: left;
 }
 hr {
     color: white;
@@ -72,6 +87,20 @@ hr {
 }
 .contactCard_address {
     font-size: 1.5em;
+}
+.newContactHeader {
+  color: white;
+}
+::placeholder {
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-bottom: 25px;
+  background-color: transparent;
+  outline: none;
+  color: #8A82B8;
 }
 @media screen and (min-width: 300px) {
     
