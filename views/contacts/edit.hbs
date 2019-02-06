@@ -1,0 +1,28 @@
+{{>header}}
+<h2 class='newContactHeader'>Edit Contact</h1>
+<div class='fourteen wide column'>
+{{#with contact}}
+<form action='/contacts/{{this.id}}?_method=PUT' method='post'>
+    <input type='text' name='contact[firstName]' value='{{this.firstName}}'>
+    <br>
+    <input type='text' name='contact[lastName]' value='{{this.lastName}}'>
+    <br>
+    <input type='text' name='contact[email]' value='{{this.email}}'>
+    <br>
+    <input type='text' name='contact[homePhone]' value='{{this.homePhone}}'>
+    <br>
+    <input type='text' name='contact[cell]' value='{{this.cell}}'>
+    <br>
+    <input type='text' name='contact[address]' value='{{this.address}}'>
+    <br>
+    <input type='text' name='contact[city]' value='{{this.city}}'>
+    <br>
+    <input type='text' name='contact[state]' value='{{this.state}}'>
+    <br>
+    <input type='text' name='contact[zipcode]' value='{{this.zipcode}}'>
+    <br>
+    <a href='/contacts'><button class='circular ui inverted button grey'>Save Contact</button></a>
+</form>
+{{/with}}
+</div>
+{{>footer}}
