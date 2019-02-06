@@ -1,9 +1,16 @@
 {{> header}}
+    <div class='newContactButton row'>
+    <div class='fifteen wide column'>
+      <a href='/contacts/new'><button class='circular ui inverted button grey'><i class='user plus icon'></i></button></a>
+      </div>
+    </div>
+<div class='fifteen wide column'>
 {{#each contacts}}
-<div class='contactList fourteen wide column'>
+<div class='contactList'>
 <p>{{this.firstName}}, {{this.lastName}}</p>
-<a href='{{this._id}}'>View Contact</a>
+<a href='/contacts/{{this._id}}'>View Contact</a>
 </div>
 <hr>
 {{/each}}
+</div>
 {{>footer}}
