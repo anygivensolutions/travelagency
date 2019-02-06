@@ -16,8 +16,12 @@
 <p class='contactCard_address'>{{contact.address}} {{contact.city}}, {{contact.state}} {{contact.zipcode}}</p>
 <hr>
 <div class='two ui buttons'>
-<div class='ui button'>Edit Contact</div>
-<div class='ui button'>Delete Contact</div>
+{{#with contact}}
+<a href='/contacts/{{this._id}}/edit'}><div class='ui button'>Edit Contact</div></a>
+  <form action='/contacts/{{this._id}}?_method=Delete' method='POST'>
+   <button class='ui button'>Delete Contact</button>
+  </form>
 </div>
+{{/with}}
 </div>
 {{>footer}}
