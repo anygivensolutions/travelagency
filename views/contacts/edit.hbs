@@ -3,23 +3,23 @@
 <div class='fourteen wide column'>
 {{#with contact}}
 <form action='/contacts/{{this.id}}?_method=PUT' method='post'>
-    <input type='text' name='contact[firstName]' value='{{this.firstName}}'>
+    <input type='text' name='contact[firstName]' value='{{this.firstName}}' placeholder'First Name'>
     <br>
-    <input type='text' name='contact[lastName]' value='{{this.lastName}}'>
+    <input type='text' name='contact[lastName]' value='{{this.lastName}}' placeholder='Last Name'>
     <br>
-    <input type='text' name='contact[email]' value='{{this.email}}'>
+    <input type='text' name='contact[email]' value='{{this.email}}' placeholder='Email'>
     <br>
-    <input type='text' name='contact[homePhone]' value='{{this.homePhone}}'>
+    <input type='text' name='contact[homePhone]' value='{{this.homePhone}}' placeholder='Home Phone'>
     <br>
-    <input type='text' name='contact[cell]' value='{{this.cell}}'>
+    <input type='text' name='contact[cell]' value='{{this.cell}}' placeholder='Cellphone'>
     <br>
-    <input type='text' name='contact[address]' value='{{this.address}}'>
+    <input type='text' name='contact[address]' value='{{this.address}}' placeholder='Address'>
     <br>
-    <input type='text' name='contact[city]' value='{{this.city}}'>
+    <input type='text' name='contact[city]' value='{{this.city}}' placeholder='City'>
     <br>
-    <input type='text' name='contact[state]' value='{{this.state}}'>
+    <input type='text' name='contact[state]' value='{{this.state}}' placeholder='State'>
     <br>
-    <input type='text' name='contact[zipcode]' value='{{this.zipcode}}'>
+    <input type='text' name='contact[zipcode]' value='{{this.zipcode}}' placeholder='Zipcode'>
     <br>
     <a href='/contacts'><button class='circular ui inverted button grey'>Save Contact</button></a>
 </form>
