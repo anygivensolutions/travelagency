@@ -115,6 +115,6 @@ app.get('/paymentbook', (req, res) => {
   res.render('paymentbook/index')
 })
 
-app.listen(3000, () => {
+app.listen(`${process.env.PORT}`, () => {
   console.log('=====Serving Wanda\'s Tours =====')
 })
