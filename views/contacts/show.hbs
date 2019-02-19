@@ -19,7 +19,7 @@
 {{#with contact}}
 <a href='/contacts/{{this._id}}/edit'}><div class='ui button'>Edit Contact</div></a>
   <form action='/contacts/{{this._id}}?_method=Delete' method='POST'>
-   <button class='ui button'>Delete Contact</button>
+   <button type='button' class='ui button'>Delete Contact</button>
   </form>
 </div>
 {{/with}}
