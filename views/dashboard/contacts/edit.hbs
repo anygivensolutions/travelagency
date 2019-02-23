@@ -1,0 +1,29 @@
+{{>header}}
+<h2 class='newContactHeader'>Edit Contact</h1>
+<div class='fourteen wide column'>
+{{#with contact}}
+<form id='test' action='/contacts/{{this.id}}?_method=PUT' method='post'>
+    <input type='text' name='contact[firstName]' value='{{this.firstName}}' placeholder'First Name'>
+    <br>
+    <input type='text' name='contact[lastName]' value='{{this.lastName}}' placeholder='Last Name'>
+    <br>
+    <input type='text' name='contact[email]' value='{{this.email}}' placeholder='Email'>
+    <br>
+    <input type='text' name='contact[homePhone]' value='{{this.homePhone}}' placeholder='Home Phone'>
+    <br>
+    <input type='text' name='contact[cell]' value='{{this.cell}}' placeholder='Cellphone'>
+    <br>
+    <input type='text' name='contact[address]' value='{{this.address}}' placeholder='Address'>
+    <br>
+    <input type='text' name='contact[city]' value='{{this.city}}' placeholder='City'>
+    <br>
+    <input type='text' name='contact[state]' value='{{this.state}}' placeholder='State'>
+    <br>
+    <input type='text' name='contact[zipcode]' value='{{this.zipcode}}' placeholder='Zipcode'>
+    <br>
+    <a  href='/contacts'><button id='confirmDelete' type='button' class='circular ui inverted button grey'>Save Contact</button></a>
+    <p id='test'></p>
+</form>
+{{/with}}
+</div>
+{{>footer}}

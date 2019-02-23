@@ -1,0 +1,27 @@
+{{>header}}
+<h2 class='newContactHeader'>Add New Contact</h1>
+<div class='fourteen wide column'>
+<form action='/contacts/new' method='post'>
+    <label for='contact[firstName]'>First Name</label>
+    <input type='text' name='contact[firstName]' placeholder='First Name'>
+    <br>
+    <input type='text' name='contact[lastName]' placeholder='Last Name'>
+    <br>
+    <input type='text' name='contact[email]' placeholder='Email'>
+    <br>
+    <input type='text' name='contact[homePhone]' placeholder='Home Phone'>
+    <br>
+    <input type='text' name='contact[cell]' placeholder='Cellphone'>
+    <br>
+    <input type='text' name='contact[address]' placeholder='Street Address'>
+    <br>
+    <input type='text' name='contact[city]' placeholder='City'>
+    <br>
+    <input type='text' name='contact[state]' placeholder='State'>
+    <br>
+    <input type='text' name='contact[zipcode]' placeholder='zipcode'>
+    <br>
+    <button type='button' class='circular ui inverted button grey'>Create New Contact</button>
+</form>
+</div>
+{{>footer}}
