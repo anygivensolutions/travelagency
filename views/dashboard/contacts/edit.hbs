@@ -1,7 +1,11 @@
 {{>header}}
-<h2 class='newContactHeader'>Edit Contact</h1>
 <div class='fourteen wide column'>
 {{#with contact}}
+<h2 class='newContactHeader'>Edit Contact</h2>
+<a href='/contacts/{{this.id}}' class='backButtonIcon'><span class='backToContacts circular ui mini button grey'>Cancel</span></a>
+<form id='deleteContactForm' action='/contacts/{{this.id}}?_method=Delete' method='Post'>
+  <a href='/contacts'><button class='circular ui mini button red deleteContact'>Delete</button></a>
+</form>
 <form id='test' action='/contacts/{{this.id}}?_method=PUT' method='post'>
     <input type='text' name='contact[firstName]' value='{{this.firstName}}' placeholder'First Name'>
     <br>
@@ -21,8 +25,7 @@
     <br>
     <input type='text' name='contact[zipcode]' value='{{this.zipcode}}' placeholder='Zipcode'>
     <br>
-    <a  href='/contacts'><button id='confirmDelete' type='button' class='circular ui inverted button grey'>Save Contact</button></a>
-    <p id='test'></p>
+    <a  href='/contacts'><button id='confirmDelete' class='circular ui mini button grey'>Save Contact</button></a>
 </form>
 {{/with}}
 </div>

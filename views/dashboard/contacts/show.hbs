@@ -1,27 +1,23 @@
 {{>header}}
-
 <div class='contactCard'>
+<div class='backButtonUi'>
+<a href='/contacts' class='backButtonIcon circular ui mini button grey'><span class='backToContacts'>Back To Contacts</span></a>
+</div>
 <p class='contactCard_name'>{{contact.firstName}} {{contact.lastName}}</p>
 <hr>
 <p class='contactCard_email'>Email: {{contact.email}}</p>
-<a href=mailto:{{contact.email}} ><button class='circular ui inverted button grey'>Send Email</button></a>
+<a href=mailto:{{contact.email}} ><button class='circular ui tiny button white'>Send Email</button></a>
 <hr>
 <p class='contactCard_homePhone'>Home Phone: {{contact.homePhone}}</p>
-<a href='tel:{{contact.homePhone}}'><button class='circular ui inverted button grey'>Call</button></a>
+<a href='tel:{{contact.homePhone}}'><button class='circular ui tiny button white'>Call</button></a>
 <hr>
 <p class='contactCard_cell'>Cell Phone: {{contact.cell}}</p>
-<a href='tel:{{contact.cell}}'><button class='circular ui inverted button grey'>Call</button></a>
+<a href='tel:{{contact.cell}}'><button class='circular ui tiny button white'>Call</button></a>
 <hr>
 <p class='contactCard_addressHeading'>Address:<p>
 <p class='contactCard_address'>{{contact.address}} {{contact.city}}, {{contact.state}} {{contact.zipcode}}</p>
 <hr>
-<div class='two ui buttons'>
 {{#with contact}}
-<a href='/contacts/{{this._id}}/edit'}><div class='ui button'>Edit Contact</div></a>
-  <form  action='/contacts/{{this._id}}?_method=Delete' method='POST'>
-   <button type='button' onclick='return confirm(Are your sure?)'class='ui confirmDelete button'>Delete Contact</button>
-  </form>
-</div>
+<a href='/contacts/{{this._id}}/edit'}><div class='ui circular center mini button grey editContact'>Edit Contact</div></a>
 {{/with}}
-</div>
 {{>footer}}
