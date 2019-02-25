@@ -13,7 +13,10 @@ body {
 .ui.container {
   margin-top: 10px;
 }
-.individualCard {
+.ui.link.cards { 
+  margin-top: 25%;
+}
+.individualCard.blue.card {
     background-color: #010319;
 }
 .addressBookContainer {
@@ -28,18 +31,16 @@ body {
     max-width: 3em;
     display: inline-block;
     margin: 1em;
+    text-align: center;
+    color: white;
 }
     
 .dollar.sign.icon {
-    color: #8A82B8;
     text-align: centered;
+    color: white;
 }
-.payments {
-    text-align: center;
-    color: blue;
-} 
 .address {
-    color: blue;
+    color: white;
 }
 .circular.ui.i {
   color: #8A82B8;
@@ -56,8 +57,33 @@ body {
 .contactList-newContact>a{
   color: #010318;
 }
+.logout {
+  float: right;
+  color: white;
+}
+.backButtonUi {
+  padding-bottom: 70px;
+  margin-left: -23px;
+  color: #d3d3d3
+}
+.backButton {
+}
+.backButtonIcon {
+  float: left;
+  color: white;
+}
+.backToContacts {
+  margin-left: -7px;
+  margin-bottom: 25px;
+  color: white;
+}
+.ui.circular.center.button.editContact {
+  margin-bottom: 10px;
+}
 .contactList {
-    color: white;
+    color: #8A82B8;
+    font-weight: 600;
+    font-size: 1.2em;
     align: left;
 }
 hr {
@@ -90,6 +116,18 @@ hr {
 }
 .newContactHeader {
   color: white;
+  margin-bottom: 50px;
+  text-align: center;
+}
+#deleteContactForm {
+  float: right;
+  display: inline;
+  margin-bottom: 30px;
+}
+.deleteContact {
+  float: right;
+  display: inline-block;
+  margin-bottom: 50px;
 }
 ::placeholder {
 }
