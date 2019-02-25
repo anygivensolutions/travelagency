@@ -156,9 +156,11 @@ app.put('/contacts/:id', (req, res) => {
   })
 })
 // delete contact
+
 app.delete('/contacts/:id', (req, res) => {
   Contact.findByIdAndRemove(req.params.id, function (err) {
     if (err) {
+      console.log(err)
       res.redirect('/contacts/' + req.params.id)
     } else {
       res.redirect('/contacts')
